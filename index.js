@@ -13,6 +13,9 @@ const gameBoard = (() => {
 
   // @param {int} pos: two digit number corresponds to the id of cells
   const setCell = (pos, player) => {
+    if (_gameBoardArray[pos[0]][pos[1]]) {
+      return;
+    }
     _gameBoardArray[pos[0]][pos[1]] = player.getSign();
   };
 
