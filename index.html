@@ -9,21 +9,25 @@
   <script src="index.js" defer></script>
 </head>
 <body>
-  <div id="game_board">
-    <div class="cell" id="00"></div>
-    <div class="cell" id="01"></div>
-    <div class="cell" id="02"></div>
-    <div class="cell" id="10"></div>
-    <div class="cell" id="11"></div>
-    <div class="cell" id="12"></div>
-    <div class="cell" id="20"></div>
-    <div class="cell" id="21"></div>
-    <div class="cell" id="22"></div>
-  </div>  
-  <div class="name">
-    <input type="text" name="playerName1" id="player_name_1" placeholder="Player's name for X">
-    <input type="text" name="playerName2" id="player_name_2" placeholder="Player's name for O">
+  <div id="container">
+    <div id="name">
+      <input type="text" name="playerName1" id="player_name_1" placeholder="Player's name for X">
+      <input type="text" name="playerName2" id="player_name_2" placeholder="Player's name for O">
+    </div>
+
+    <div id="game_board">
+      <div class="cell" id="00"></div>
+      <div class="cell" id="01"></div>
+      <div class="cell" id="02"></div>
+      <div class="cell" id="10"></div>
+      <div class="cell" id="11"></div>
+      <div class="cell" id="12"></div>
+      <div class="cell" id="20"></div>
+      <div class="cell" id="21"></div>
+      <div class="cell" id="22"></div>
+    </div>  
+
+    <button id="restart_btn">Restart</button>
   </div>
-  <button id="restart_btn">Restart</button>
 </body>
 </html>

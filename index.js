@@ -116,9 +116,11 @@ const gameController = (() => {
     gameBoard.setCell(pos, currPlayer);
     displayGameBoard(board);
     if (_checkWin(board)) {
-      console.log(`${currPlayer.getName()} wins`);
+      alert(`${currPlayer.getName()} wins`);
+      restartGame();
     } else if (_checkDraw(board)) {
-      console.log("Draw");
+      alert("Draw");
+      restartGame();
     }
   };
   return { setPlayer, makeMove };
@@ -137,6 +139,11 @@ const setPlayer = (e, sign) => {
   gameController.setPlayer(newPlayer);
 };
 
+const restartGame = () => {
+  gameBoard.clearBoard();
+  displayGameBoard(gameBoard.getGameBoard());
+};
+
 cells.forEach((cell) => {
   cell.addEventListener("click", (e) => {
     gameController.makeMove(e.target.id);
@@ -152,6 +159,5 @@ playerName2.addEventListener("change", (e) => {
 });
 
 restartBtn.addEventListener("click", () => {
-  gameBoard.clearBoard();
-  displayGameBoard(gameBoard.getGameBoard());
+  restartGame();
 });
